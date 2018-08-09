@@ -16,7 +16,8 @@ export default {
   methods: {
     buttonColor: (color) => ({
       'button--primary': color === 'primary',
-      'button--secondary': color === 'secondary'
+      'button--secondary': color === 'secondary',
+      'button--transparent': color === 'transparent'
     })
   }
 }
@@ -47,9 +48,9 @@ export default {
   white-space: nowrap;
   -webkit-appearance: none;
 
-    @media screen and (min-width: $breakpointSmall) {
-      font-size: 1.2rem;
-    }
+  @media screen and (min-width: $breakpointSmall) {
+    font-size: 1.2rem;
+  }
 
   &:hover {
     box-shadow: 0 2px 8px rgba(0,0,0,.3);
@@ -62,9 +63,20 @@ export default {
     color: #fff;
   }
 
-    &.button--secondary {
+  &.button--secondary {
     background-color: $secondary;
     color: #fff;
+  }
+
+  &.button--transparent {
+    background-color: transparent;
+    color: $text;
+    font-weight: normal;
+    font-size: 0.9em;
+
+    &:hover {
+      box-shadow: none;
+    }
   }
 }
 </style>

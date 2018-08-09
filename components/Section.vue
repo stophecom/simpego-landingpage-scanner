@@ -67,7 +67,9 @@ export default {
   }
 
   .section__cta {
+    align-items: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding-bottom: 1rem;
     padding-top: 1rem;

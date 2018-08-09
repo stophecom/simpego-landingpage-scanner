@@ -20,6 +20,7 @@
     </ul>
     <div class="section__cta">
       <Button color="primary">Jetzt scannen</Button>
+      <Button color="transparent">Foto hochladen</Button>
     </div>
   </Section>
   <Section alternative>
