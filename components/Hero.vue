@@ -4,6 +4,7 @@
         <div class="hero__content">
           <slot></slot>
         </div>
+        <span class="more fa fa-arrow-down"></span>
     </section>
 </template>
 
@@ -23,8 +24,12 @@ export default {
     align-items: center;
     display: flex;
     justify-content: center;
-    min-height: calc(90vh - #{$header-height});
+    min-height: calc(100vh - #{$header-height});
     position: relative;
+
+    @media screen and (min-width: $breakpointMini) {
+      min-height: calc(78vh - #{$header-height});
+    }
 
     .hero__background {
         left: 0;
@@ -43,6 +48,16 @@ export default {
         position: absolute;
         top: 0;
         width: 100%;
+    }
+
+    .more {
+      bottom: 3vh;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 1rem;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      z-index: 1;
     }
 
     .hero__content {

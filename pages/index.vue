@@ -7,14 +7,24 @@
   </Hero>
   <Section>
     <h1>Spare 500 CHF  pro Jahr mit einem Foto.</h1>
-    <div class="section__headline">Finde die beste Autoversicherung auf dem gesamten Schweizer Markt. Ein Foto von deinem Fahrzeugausweis genügt.</div>
+    <div class="section__headline">Finde die beste Autoversicherung auf dem gesamten Schweizer Markt. Ein Foto von deinem Fahrzeugausweis genügt. So funktionierts:</div>
+    <ul class="manual">
+      <li>
+        <img alt="Scanner" src="/images/scan.svg" />
+        <div class="description">1. Fahrzeugausweis fotografieren</div>
+      </li>
+      <li>
+        <img alt="Done" src="/images/done.svg" />
+        <div class="description">2. Boom. Simpege liefert dir das beste Angebot.</div>
+      </li>
+    </ul>
     <div class="section__cta">
       <Button color="primary">Jetzt scannen</Button>
     </div>
   </Section>
   <Section alternative>
     <h2>Warum Simpego</h2>
-    <div class="section__headline">Wir haben bereits verglichen und bieten nur die preiswerten Versicherugen mit dem besten Preis-Leistungs-Verhältnis an.</div>
+    <div class="section__headline">Wir haben bereits für Sie verglichen und bieten deshalb nur die Versicherugen mit dem besten Preis-Leistungs-Verhältnis an.</div>
     <PartnerLogos/>
     <div class="section__cta">
       <Button color="secondary">Mehr erfahren</Button>
@@ -40,5 +50,22 @@ export default {
 </script>
 
 <style lang="scss">
+.manual {
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 
+  @media screen and (min-width: $breakpointMini) {
+    display: flex;
+  }
+
+  li {
+    padding: 2rem;
+    max-width: 250px;
+
+    img {
+    }
+  }
+}
 </style>
