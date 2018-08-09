@@ -1,5 +1,6 @@
 
 // Breakpoints
+$breakpointMini: 400px;
 $breakpointSmall: 600px;
 
 $maxPageWidth: 990px;
@@ -23,7 +24,7 @@ $link: $primary;
 $link-visited: $primary;
 
 // Typography
-$body-background-color: white;
+$body-background-color: #fbfaf9;
 $body-line-height: 1.4;
 $body-rendering: optimizeLegibility;
 $body-size: 17px;

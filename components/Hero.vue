@@ -23,7 +23,7 @@ export default {
     align-items: center;
     display: flex;
     justify-content: center;
-    min-height: calc(100vh - #{$header-height});
+    min-height: calc(90vh - #{$header-height});
     position: relative;
 
     .hero__background {
@@ -50,6 +50,39 @@ export default {
       position: relative;
       max-width: 90%;
       z-index: 1;
+      text-align: center;
+      margin-top: 10vh;
+
+      @media screen and (min-width: $breakpointMini) {
+        max-width: 80%;
+      }
+
+      @media screen and (min-width: $breakpointSmall) {
+        max-width: 580px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.4em;
+
+        @media screen and (min-width: $breakpointSmall) {
+          font-size: 3rem;
+        }
+      }
+
+      p {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 2em;
+
+        @media screen and (min-width: $breakpointSmall) {
+          font-size: 1.2rem;
+        }
+      }
+
+      .button {
+        transform: scale(1.2);
+      }
     }
 }
 </style>

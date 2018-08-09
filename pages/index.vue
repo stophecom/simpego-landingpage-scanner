@@ -1,20 +1,23 @@
 <template>
 <div class="index">
-  <Hero>
-    <h1>Insure your drone now!</h1>
+  <Hero backgroundImage="/images/background-car-3.jpg">
+    <h1>Autoversicherung, abgefahren einfach!</h1>
+    <p>Unschlagbare Preise. Volle Transparenz. Alles Digital.</p>
+    <Button color="primary">Jetzt berechnen</Button>
   </Hero>
   <Section>
-    <h1>Simpego - smart insurance</h1>
-    <div class="section__headline">Switerland's first insurance marketplace. We did the comparison for you. Eliminate risk at the lowest rates.</div>
+    <h1>Spare 500 CHF  pro Jahr mit einem Foto.</h1>
+    <div class="section__headline">Finde die beste Autoversicherung auf dem gesamten Schweizer Markt. Ein Foto von deinem Fahrzeugausweis genügt.</div>
     <div class="section__cta">
-      <Button color="primary">Primary</Button>
+      <Button color="primary">Jetzt scannen</Button>
     </div>
   </Section>
   <Section alternative>
-    <h2>Why Simpego</h2>
-    <div class="section__headline">We are the best.</div>
+    <h2>Warum Simpego</h2>
+    <div class="section__headline">Wir haben bereits verglichen und bieten nur die preiswerten Versicherugen mit dem besten Preis-Leistungs-Verhältnis an.</div>
+    <PartnerLogos/>
     <div class="section__cta">
-      <Button color="secondary">Secondary</Button>
+      <Button color="secondary">Mehr erfahren</Button>
     </div>
   </Section>
   </div>
@@ -24,25 +27,18 @@
 import Button from '../components/Button'
 import Hero from '../components/Hero'
 import Section from '../components/Section'
+import PartnerLogos from '../components/PartnerLogos'
 
 export default {
   components: {
     Button,
     Hero,
-    Section
+    Section,
+    PartnerLogos
   }
 }
 </script>
 
 <style lang="scss">
-.hero {
-  h1 {
-    font-size: 2em;
-    text-align: center;
 
-    @media screen and (min-width: $breakpointSmall) {
-      font-size: 3em;
-    }
-  }
-}
 </style>

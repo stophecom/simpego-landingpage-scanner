@@ -54,6 +54,12 @@ ul {
   list-style-type: none;
 }
 
+h1,
+h2,
+h3 {
+  line-height: 1.15;
+}
+
 .main {
   margin-top: $header-height;
   min-height: calc(80vh);
