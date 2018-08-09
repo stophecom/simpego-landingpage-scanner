@@ -1,0 +1,37 @@
+
+// Breakpoints
+$breakpointSmall: 600px;
+
+$maxPageWidth: 990px;
+
+// Colors
+$primary: #0abb72;
+$secondary: #3b4a87;
+$info: #0a1d69;
+$text: #666;
+$text-light: #a6a6ab;
+$text-strong: #060a39;
+$colorPlaceholder: $text-light;
+
+$defaultBackground: white;
+$alternativeBackground: #eef2f5;
+
+$colorBorder: #ececec;
+
+// Link Colors
+$link: $primary;
+$link-visited: $primary;
+
+// Typography
+$body-background-color: white;
+$body-line-height: 1.4;
+$body-rendering: optimizeLegibility;
+$body-size: 17px;
+$family-sans-serif: 'Work Sans', 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;
+
+// Section
+$sectionPadding: 4vw;
+
+// Miscellaneous
+$radius: 5px;
+$header-height: 3.6rem;
