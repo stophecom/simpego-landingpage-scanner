@@ -2,7 +2,7 @@
     <nav class="header">
         <div class="container header-inner">
             <a class="logo" href="/">
-                      <img alt="Simpego Logo" src="/images/logo.png" width="104" height="27">
+                      <img alt="Simpego Logo" src="/images/logo.svg" width="104" height="27">
                     </a>
             <span class="tagline">smart versichert</span>
             <a class="link" aria-current="false" href="https://www.simpego.ch/kontakt/">Feedback</a>

@@ -3,7 +3,7 @@
         <div class="container">
             <nav>
                 <ul class="footer__menu">
-                    <li class="logo"><a class="active" aria-current="true" alt="Startseite" href="/"><img alt="Simpego Logo" src="/images/logo.png" width="104" height="27"></a></li>
+                    <li class="logo"><a class="active" aria-current="true" alt="Startseite" href="/"><img alt="Simpego Logo" src="/images/logo.svg" width="104" height="27"></a></li>
                     <li><a aria-current="false" href="https://www.simpego.ch/about/">Über Simpego</a></li>
                     <li><a aria-current="false" href="https://www.simpego.ch/faq/">FAQ</a></li>
                     <li><a aria-current="false" href="https://www.simpego.ch/rechtliches/">Rechtliches</a></li>
@@ -11,8 +11,8 @@
                 </ul>
             </nav>
             <ul class="footer__trust-badges">
-                <li><a href="https://www.finma.ch" rel="noopener noreferrer" target="_blank"><img alt="Logo der Finanzmarktaufsicht (Finma)" src="https://www.simpego.ch/static/finma@2x.860717e1.png" width="107" height="28"></a></li>
-                <li><img alt="Diese Seite benutzt SSL-Verschlüsselung" src="https://www.simpego.ch/static/ssl-checkmark@2x.bfdb884d.png" width="27" height="30"></li>
+                <li><a href="https://www.finma.ch" rel="noopener noreferrer" target="_blank"><img alt="Logo der Finanzmarktaufsicht (Finma)" src="/images/finma.png" width="107" height="28"></a></li>
+                <li><img alt="Diese Seite benutzt SSL-Verschlüsselung" src="/images/ssl-checkmark.png"></li>
             </ul>
         </div>
         <ul class="social-media-links">
@@ -25,10 +25,9 @@
 
 <style lang="scss">
 .footer {
-  margin-top: 1em;
-  padding-bottom: 80px; //Space for FooterCheckout
-  padding-left: $sectionPadding;
-  padding-right: $sectionPadding;
+  background-color: white;
+  border-top: 1px solid $colorBorder;
+  padding: 1em $sectionPadding;
 
   a {
     color: $text-strong;
@@ -62,6 +61,11 @@
   &__trust-badges {
     display: flex;
     margin-left: auto;
+
+    img {
+      object-fit: contain;
+      max-height: 1.2rem;
+    }
   }
 
   .social-media-links {
