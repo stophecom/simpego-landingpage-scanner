@@ -60,6 +60,10 @@
         a {
           color: $text;
           padding: 0.2rem;
+
+          &.nuxt-link-active {
+            font-weight: 600;
+          }
         }
       }
     }
