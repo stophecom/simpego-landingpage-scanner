@@ -41,7 +41,8 @@ module.exports = {
     ['nuxt-sass-resources-loader', './assets/main.scss'],
     ['nuxt-i18n-module', {
       languages: ['de', 'en']
-    }]
+    }],
+    '@nuxtjs/axios'
   ],
 
   generate: {

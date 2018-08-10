@@ -13,7 +13,7 @@
       </li>
     </ul>
     <div class="section__cta">
-      <Button color="primary">{{ $t('button.scan') }}</Button>
+      <FileUpload />
       <Button color="transparent">{{ $t('button.upload') }}</Button>
     </div>
   </Section>
@@ -21,11 +21,13 @@
 
 <script>
 import Button from '../components/Button'
+import FileUpload from '../components/FileUpload'
 import Section from '../components/Section'
 
 export default {
   components: {
     Button,
+    FileUpload,
     Section
   },
   i18n: {
