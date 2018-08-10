@@ -1,9 +1,9 @@
 <template>
   <nav class="header">
     <div class="container header-inner">
-      <a class="logo" href="/">
+      <nuxt-link class="logo" :to="localePath('/')">
         <img alt="Simpego Logo" src="/images/logo.svg" width="104" height="27">
-      </a>
+      </nuxt-link>
       <span class="tagline">{{ $t('tagline') }}</span>
       <i18n-switcher/>
       <a class="link" aria-current="false" href="https://www.simpego.ch/kontakt/">Feedback</a>

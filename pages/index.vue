@@ -3,7 +3,7 @@
   <Hero backgroundImage="/images/background-car-3.jpg">
     <h1>{{ $t('hero.title') }}</h1>
     <p>{{ $t('hero.teaser') }}</p>
-    <Button color="primary">{{ $t('button.calculateNow') }}</Button>
+    <Button color="primary" to="/scanner">{{ $t('button.calculateNow') }}</Button>
   </Hero>
   <SectionScanner />
   <Section alternative>
@@ -11,7 +11,7 @@
     <div class="section__headline">{{ $t('why.teaser') }}</div>
     <PartnerLogos/>
     <div class="section__cta">
-      <Button color="secondary">{{ $t('button.learnMore') }}</Button>
+      <Button color="secondary" href="https://simpego.ch">{{ $t('button.learnMore') }}</Button>
     </div>
   </Section>
   </div>

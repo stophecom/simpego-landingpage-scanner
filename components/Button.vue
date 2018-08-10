@@ -1,7 +1,10 @@
 <template>
-  <a class="button" :class="buttonColor(color)">
+  <a v-if="href" class="button" :class="buttonColor(color)" :href="href" rel="noopener" target="_blank">
     <slot></slot>
   </a>
+  <nuxt-link v-else class="button" :class="buttonColor(color)" :to="localePath(to)">
+    <slot></slot>
+  </nuxt-link>
 </template>
 
 <script>
@@ -10,6 +13,14 @@ export default {
     color: {
       type: String,
       default: 'primary'
+    },
+    to: {
+      type: String,
+      default: '/'
+    },
+    href: {
+      type: String,
+      default: ''
     }
   },
 
