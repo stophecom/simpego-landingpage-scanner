@@ -66,6 +66,7 @@ export default {
       max-width: 90%;
       z-index: 1;
       text-align: center;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.12);
       margin-top: 10vh;
 
       @media screen and (min-width: $breakpointMini) {

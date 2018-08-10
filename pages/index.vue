@@ -36,7 +36,7 @@ export default {
     messages: {
       en: {
         hero: {
-          title: 'Car insurance drives you crazy? We fix that.',
+          title: 'Car insurance, made simple again',
           teaser: 'Killer Prices. Full Transparency. All Digital.'
         },
         why: {
