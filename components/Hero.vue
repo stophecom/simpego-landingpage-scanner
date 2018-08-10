@@ -28,7 +28,7 @@ export default {
     position: relative;
 
     @media screen and (min-width: $breakpointMini) {
-      min-height: calc(78vh - #{$header-height});
+      min-height: calc(100vh - #{$header-height});
     }
 
     .hero__background {
@@ -76,12 +76,20 @@ export default {
         max-width: 580px;
       }
 
+      @media screen and (min-width: $breakpointMedium) {
+        max-width: 700px;
+      }
+
       h1 {
         font-size: 1.8rem;
         margin-bottom: 0.4em;
 
         @media screen and (min-width: $breakpointSmall) {
           font-size: 3rem;
+        }
+
+        @media screen and (min-width: $breakpointMedium) {
+          font-size: 4rem;
         }
       }
 
