@@ -1,0 +1,14 @@
+{
+  "button": {
+    "scan": "Scan now",
+    "upload": "Upload photo",
+    "learnMore": "Learn more",
+    "calculateNow": "Get a quote"
+  },
+  "menu": {
+    "about": "About Simpego",
+    "faq": "FAQ",
+    "legal": "Legal",
+    "contact": "Contact"
+  }
+}

@@ -38,7 +38,10 @@ module.exports = {
   modules: [
     '@nuxtjs/pwa',
     '@nuxtjs/font-awesome',
-    ['nuxt-sass-resources-loader', './assets/main.scss']
+    ['nuxt-sass-resources-loader', './assets/main.scss'],
+    ['nuxt-i18n-module', {
+      languages: ['de', 'en']
+    }]
   ],
 
   generate: {

@@ -1,0 +1,14 @@
+{
+  "button": {
+    "scan": "Jetzt scannen",
+    "upload": "Foto hochladen",
+    "learnMore": "Mehr erfahren",
+    "calculateNow": "Jetzt berechnen"
+  },
+  "menu": {
+    "about": "Über Simpego",
+    "faq": "FAQ",
+    "legal": "Rechtliches",
+    "contact": "Kontakt"
+  }
+}

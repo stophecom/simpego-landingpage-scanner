@@ -4,10 +4,10 @@
             <nav>
                 <ul class="footer__menu">
                     <li class="logo"><a class="active" aria-current="true" alt="Startseite" href="/"><img alt="Simpego Logo" src="/images/logo.svg" width="104" height="27"></a></li>
-                    <li><a aria-current="false" href="https://www.simpego.ch/about/">Über Simpego</a></li>
-                    <li><a aria-current="false" href="https://www.simpego.ch/faq/">FAQ</a></li>
-                    <li><a aria-current="false" href="https://www.simpego.ch/rechtliches/">Rechtliches</a></li>
-                    <li><a aria-current="false" href="https://www.simpego.ch/kontakt/">Kontakt</a></li>
+                    <li><a aria-current="false" href="https://www.simpego.ch/about/">{{ $t('menu.about') }}</a></li>
+                    <li><a aria-current="false" href="https://www.simpego.ch/faq/">{{ $t('menu.faq') }}</a></li>
+                    <li><a aria-current="false" href="https://www.simpego.ch/rechtliches/">{{ $t('menu.legal') }}</a></li>
+                    <li><a aria-current="false" href="https://www.simpego.ch/kontakt/">{{ $t('menu.contact') }}</a></li>
                 </ul>
             </nav>
             <ul class="footer__trust-badges">
