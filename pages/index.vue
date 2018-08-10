@@ -25,7 +25,7 @@
   </Section>
   <Section alternative>
     <h2>Warum Simpego</h2>
-    <div class="section__headline">Wir haben bereits für Sie verglichen und bieten deshalb nur die Versicherugen mit dem besten Preis-Leistungs-Verhältnis an.</div>
+    <div class="section__headline">Wir haben bereits für dich verglichen und bieten deshalb nur die Versicherugen mit dem besten Preis-Leistungs-Verhältnis an.</div>
     <PartnerLogos/>
     <div class="section__cta">
       <Button color="secondary">Mehr erfahren</Button>
