@@ -1,10 +1,10 @@
 <template>
   <div class="partner-logos">
-    <img src="/images/partner/pl_basler.svg">
-    <img src="/images/partner/pl_coop.svg">
-    <img src="/images/partner/pl_dextra.png">
-    <img src="/images/partner/pl_erv.svg">
-    <img src="/images/partner/pl_vaudoise.svg">
+    <img alt="Basler Versicherung" src="/images/partner/pl_basler.svg">
+    <img alt="Coop Rechtsschutz" src="/images/partner/pl_coop.svg">
+    <img alt="Dextra" src="/images/partner/pl_dextra.png">
+    <img alt="ERV" src="/images/partner/pl_erv.svg">
+    <img alt="Vaudoise" src="/images/partner/pl_vaudoise.svg">
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
     <section class="hero">
-        <img class="hero__background" :src="backgroundImage" />
+        <img alt="Background" class="hero__background" :src="backgroundImage" />
         <div class="hero__content">
           <slot></slot>
         </div>
