@@ -6,7 +6,7 @@
       </nuxt-link>
       <span class="tagline">{{ $t('tagline') }}</span>
       <i18n-switcher/>
-      <a class="link" aria-current="false" href="https://www.simpego.ch/kontakt/">Feedback</a>
+      <a class="link" aria-current="false" href="mailto:hallo@simpego.ch">Feedback</a>
     </div>
   </nav>
 </template>
