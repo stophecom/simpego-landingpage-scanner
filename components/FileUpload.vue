@@ -21,7 +21,7 @@ export default {
     handleFilesUpload () {
       this.file = this.$refs.file.files[0]
 
-      this.$axios.post('/dextra',
+      this.$axios.post('https://1bd20287.ngrok.io/dextra',
         this.file,
         {
           headers: {
