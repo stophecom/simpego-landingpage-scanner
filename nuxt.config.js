@@ -9,7 +9,10 @@ module.exports = {
         href:
           'https://fonts.googleapis.com/css?family=Work+Sans:400,600,700'
       }
-    ]
+    ],
+    script: [
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' }
+    ],
   },
   meta: {
     name: 'Simpego',

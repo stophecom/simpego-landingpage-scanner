@@ -9,6 +9,7 @@
     "@nuxtjs/font-awesome": "^1.0.3",
     "@nuxtjs/pwa": "latest",
     "bulma": "^0.7.1",
+    "jquery": "^3.3.1",
     "nuxt": "latest",
     "nuxt-i18n-module": "^0.1.0"
   },

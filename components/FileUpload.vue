@@ -1,8 +1,10 @@
 <template>
-  <Button plain>
-    {{ $t('button.scan') }}
-    <input accept="image/*" type="file" id="files" ref="file" @change="handleFilesUpload()"/>
-  </Button>
+  <form v-on:submit.prevent @change="handleFilesUpload()" enctype="multipart/form-data" id="take-picture-form">
+    <Button plain>
+      {{ $t('button.scan') }}
+      <input accept="image/*" type="file" id="files" name="file" ref="file"/>
+    </Button>
+  </form>
 </template>
 
 <script>
@@ -19,21 +21,26 @@ export default {
   },
   methods: {
     handleFilesUpload () {
-      this.file = this.$refs.file.files[0]
+      this.file = this.$refs.file
 
-      this.$axios.post('https://1bd20287.ngrok.io/dextra',
-        this.file,
-        {
+      this.$axios({
+        url: 'https://1bd20287.ngrok.io/dextra',
+        method: 'post',
+        // here was empty...only onsubmit() has file in that input
+        // so onchange() file could trigger onsubmit() of form but you cannot onchange/ file send empty request
+        data: new FormData(window.$('#take-picture-form')[0]),
+        config: {
           headers: {
             'Content-Type': 'multipart/form-data'
           }
         }
-      ).then(() => {
-        console.log('SUCCESS!!')
+      }).then(e => {
+        console.log('SUCCESS!!', e)
       })
-      .catch(() => {
-        console.log('FAILURE!!')
-      })
+        .catch(e => {
+          console.log('FAILURE!!', e.message)
+          // Here can be also that you submited picture of an animal
+        })
     }
   }
 }
