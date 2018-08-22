@@ -1,10 +1,16 @@
 <template>
-  <form v-on:submit.prevent @change="handleFilesUpload()" enctype="multipart/form-data" id="take-picture-form">
-    <Button plain>
-      {{ $t('button.upload') }}
-      <input accept="image/*" type="file" id="files" name="file" ref="file"/>
-    </Button>
-  </form>
+  <div>
+    <div v-if="loading">
+      <img src="/images/loading.gif" />
+    </div>
+    <form v-else class="form" v-on:submit.prevent @change="handleFilesUpload()" enctype="multipart/form-data" id="take-picture-form">
+      <Button plain>
+        {{ $t('button.upload') }}
+        <input accept="image/*" type="file" id="files" name="file" ref="file"/>
+      </Button>
+      <div v-if="error" class="form__error">{{ $t('scanError') }}</div>
+    </form>
+  </div>
 </template>
 
 <script>
@@ -19,11 +25,13 @@ export default {
     return {
       file: '',
       data: {},
-      error: false
+      error: false,
+      loading: true
     }
   },
   methods: {
     handleFilesUpload () {
+      this.loading = true
       this.$axios({
         url: 'https://1bd20287.ngrok.io/dextra',
         method: 'post',
@@ -34,14 +42,25 @@ export default {
           }
         }
       }).then(({data}) => {
+        this.loading = false
         this.data = data.response
         this.$emit('success', data)
-        // console.log('SUCCESS!!', data)
       })
         .catch(e => {
+          this.loading = false
           console.warn('FAILURE!!', e.message)
           this.error = true
         })
+    }
+  },
+  i18n: {
+    messages: {
+      en: {
+        scanError: 'Vehicle recognition failed. You posted some random picture, did you? :) Try with a real vehicle registration and save money.'
+      },
+      en: {
+        scanError: 'Fahrzeugerkennung fehlgeschlagen. Das Bild war kein Ausweis, stimmts? :) Versuche es mit einem richtigen Ausweis uns spare viel Geld.'
+      }
     }
   }
 }

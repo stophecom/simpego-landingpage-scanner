@@ -2,7 +2,7 @@
   <Section class="scanner">
 
     <div v-if="carBrandAndType">
-      <div class="divider">{{ $t('statusSuccess') }}</div>
+      <div class="status status--success">{{ $t('statusSuccess') }}</div>
       <h1>{{ carBrandAndType }}</h1>
       <p class="section__headline">{{ $t('successMessage') }}</p>
       <div class="box">
@@ -73,7 +73,7 @@ export default {
         manual1: 'Take a picture of your vehicle registration document',
         manual2: 'Simpego finds you the best deal.',
         successMessage: 'Wow, what a nice car. Let\'s get that baby insured right away!',
-        statusSuccess: 'Scan successful!',
+        statusSuccess: 'Vehicle recognition successful:',
         postEmail: 'Please leave your email and receive your quote in no time',
         postEmailSuccess: 'Huge success. You are about to save a substantial amount of money. We\'ll get back at you with your personal offer shortly.',
         postEmailFailure: 'An error occured. Bitte contact support via E-Mail: hallo@simpego.ch'
@@ -84,7 +84,7 @@ export default {
         manual1: 'Fahrzeugausweis fotografieren',
         manual2: 'Simpege liefert dir das beste Angebot.',
         successMessage: 'Wow, was für ein toller Wagen. Lass uns den gleich versichern!',
-        statusSuccess: 'Scannen erfolgreich!',
+        statusSuccess: 'Fahrzeugerkennung erfolgreich:',
         postEmail: 'Hinterlasse deine E-mail und wir melden uns umgehend mit dem besten Angebot.',
         postEmailSuccess: 'Bravo - so einfach geht sparen. Wir melden uns in Kürze mit deinem persönlichn Angebot!',
         postEmailFailure: 'Es ist ein Fehler aufgetreten. Bitte kontaktiere uns via E-Mail: hallo@simpego.ch'
@@ -95,12 +95,19 @@ export default {
 </script>
 
 <style lang="scss">
-.divider {
+.status {
   text-align: center;
   font-size: 0.8rem;
   text-transform: uppercase;
-  color: $primary;
   margin-bottom: 2em;
+
+  &--error {
+    color: $error;
+  }
+
+  &--success {
+    color: $primary;
+  }
 }
 
 .box {
