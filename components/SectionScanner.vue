@@ -86,7 +86,7 @@ export default {
         successMessage: 'Wow, was für ein toller Wagen. Lass uns den gleich versichern!',
         statusSuccess: 'Fahrzeugerkennung erfolgreich:',
         postEmail: 'Hinterlasse deine E-mail und wir melden uns umgehend mit dem besten Angebot.',
-        postEmailSuccess: 'Bravo - so einfach geht sparen. Wir melden uns in Kürze mit deinem persönlichn Angebot!',
+        postEmailSuccess: 'Bravo - so einfach geht sparen. Wir melden uns in Kürze mit deinem persönlichen Angebot!',
         postEmailFailure: 'Es ist ein Fehler aufgetreten. Bitte kontaktiere uns via E-Mail: hallo@simpego.ch'
       }
     }
