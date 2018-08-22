@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="loading">
-      <img src="/images/loading.gif" />
+      <Spinner />
     </div>
     <form v-else class="form" v-on:submit.prevent @change="handleFilesUpload()" enctype="multipart/form-data" id="take-picture-form">
       <Button plain>
@@ -16,17 +16,19 @@
 <script>
 /* eslint-disable */
 import Button from './Button'
+import Spinner from './Spinner'
 
 export default {
   components: {
-    Button
+    Button,
+    Spinner
   },
   data () {
     return {
       file: '',
       data: {},
       error: false,
-      loading: true
+      loading: false
     }
   },
   methods: {

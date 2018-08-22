@@ -119,10 +119,12 @@ export default {
   flex-direction: column;
   justify-content: center;
   margin: 1rem auto;
-  max-width: 460px;
-  min-width: 260px;
-  padding: 2rem;
-  width: 50%;
+  padding: 2rem 1rem;
+
+   @media screen and (min-width: $breakpointSmall) {
+    max-width: 460px;
+    padding: 2rem;
+  }
 
   &__intro {
     text-align: center;

@@ -62,7 +62,7 @@ export default {
   height: 2.25em;
   justify-content: center;
   line-height: 1.5;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   margin: 0 0.2rem;
   padding: calc(0.375em - 1px) 0.75em;
@@ -73,10 +73,6 @@ export default {
   vertical-align: top;
   white-space: nowrap;
   -webkit-appearance: none;
-
-  @media screen and (min-width: $breakpointSmall) {
-    font-size: 1.2rem;
-  }
 
   &:hover {
     box-shadow: 0 2px 8px rgba(0,0,0,.3);
