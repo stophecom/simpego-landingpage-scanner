@@ -1,49 +1,93 @@
 <template>
   <Section class="scanner">
-    <h1>{{ $t('title') }}</h1>
-    <div class="section__headline">{{ $t('headline') }}</div>
-    <ul class="manual">
-      <li>
-        <img alt="Scanner" src="/images/scan.svg" />
-        <div class="description"><strong>1.</strong> {{ $t('manual1') }}</div>
-      </li>
-      <li>
-        <img alt="Done" src="/images/done.svg" />
-        <div class="description"><strong><del>2.</del> Boom.</strong> {{ $t('manual2') }}</div>
-      </li>
-    </ul>
-    <div class="section__cta">
-      <FileUpload />
-      <Button color="transparent">{{ $t('button.upload') }}</Button>
+
+    <div v-if="carBrandAndType">
+      <div class="divider">{{ $t('statusSuccess') }}</div>
+      <h1>{{ carBrandAndType }}</h1>
+      <p class="section__headline">{{ $t('successMessage') }}</p>
+      <div class="box">
+        <template v-if="emailSuccess">
+          <p class="box__intro box__intro--success">{{ $t('postEmailSuccess') }}</p>
+        </template>
+        <template v-else-if="emailFailure">
+          <p class="box__intro box__intro--error">{{ $t('postEmailFailure') }}</p>
+        </template>
+        <template v-else>
+          <p class="box__intro">{{ $t('postEmail') }}</p>
+          <EmailForm :carDetails="carDetails" @success="emailSuccess = true" @failure="emailFailure = true" />
+        </template>
+      </div>
+    </div>
+    <div v-else>
+      <h1>{{ $t('title') }}</h1>
+      <div class="section__headline">{{ $t('headline') }}</div>
+      <ul class="manual">
+        <li>
+          <img alt="Scanner" src="/images/scan.svg" />
+          <div class="description"><strong>1.</strong> {{ $t('manual1') }}</div>
+        </li>
+        <li>
+          <img alt="Done" src="/images/done.svg" />
+          <div class="description"><strong><del>2.</del> Boom.</strong> {{ $t('manual2') }}</div>
+        </li>
+      </ul>
+      <div class="section__cta">
+        <FileUpload v-on:success="handleData"/>
+      </div>
     </div>
   </Section>
 </template>
 
 <script>
+import { get } from 'lodash'
+
 import Button from '../components/Button'
+import EmailForm from '../components/EmailForm'
 import FileUpload from '../components/FileUpload'
 import Section from '../components/Section'
 
 export default {
   components: {
     Button,
+    EmailForm,
     FileUpload,
     Section
+  },
+  data: () => ({
+    carBrandAndType: '',
+    carDetails: {},
+    emailSuccess: false,
+    emailFailure: false
+  }),
+  methods: {
+    handleData (data) {
+      this.carBrandAndType = get(data, '[0].fields.brandAndType')
+      this.carDetails = get(data, '[0].fields')
+    }
   },
   i18n: {
     messages: {
       en: {
         title: 'Save CHF 500 a year with one photo.',
         headline: 'Find the best car insurance in the entire Swiss market. A photo of your vehicle registration document is enough. Here\'s how it works:',
-        manual1: 'Take a photo of your vehicle registration document',
-        manual2: 'Simpego finds you the best deal.'
-
+        manual1: 'Take a picture of your vehicle registration document',
+        manual2: 'Simpego finds you the best deal.',
+        successMessage: 'Wow, what a nice car. Let\'s get that baby insured right away!',
+        statusSuccess: 'Scan successful!',
+        postEmail: 'Please leave your email and receive your quote in no time',
+        postEmailSuccess: 'Huge success. You are about to save a substantial amount of money. We\'ll get back at you with your personal offer shortly.',
+        postEmailFailure: 'An error occured. Bitte contact support via E-Mail: hallo@simpego.ch'
       },
       de: {
         title: 'Spare CHF 500  pro Jahr mit einem Foto.',
         headline: 'Finde die beste Autoversicherung auf dem gesamten Schweizer Markt. Ein Foto von deinem Fahrzeugausweis genügt. So funktionierts:',
         manual1: 'Fahrzeugausweis fotografieren',
-        manual2: 'Simpege liefert dir das beste Angebot.'
+        manual2: 'Simpege liefert dir das beste Angebot.',
+        successMessage: 'Wow, was für ein toller Wagen. Lass uns den gleich versichern!',
+        statusSuccess: 'Scannen erfolgreich!',
+        postEmail: 'Hinterlasse deine E-mail und wir melden uns umgehend mit dem besten Angebot.',
+        postEmailSuccess: 'Bravo - so einfach geht sparen. Wir melden uns in Kürze mit deinem persönlichn Angebot!',
+        postEmailFailure: 'Es ist ein Fehler aufgetreten. Bitte kontaktiere uns via E-Mail: hallo@simpego.ch'
       }
     }
   }
@@ -51,6 +95,45 @@ export default {
 </script>
 
 <style lang="scss">
+.divider {
+  text-align: center;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: $primary;
+  margin-bottom: 2em;
+}
+
+.box {
+  align-items: center;
+  border: 1px solid $colorBorderStrong;
+  border-radius: $borderRadius;
+  background-color: $defaultBackground;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem auto;
+  max-width: 460px;
+  min-width: 260px;
+  padding: 2rem;
+  width: 50%;
+
+  &__intro {
+    text-align: center;
+
+    &--success {
+      color: $primary;
+    }
+
+    &--error {
+      color: $error;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
 .manual {
   align-items: center;
   display: flex;
@@ -68,9 +151,6 @@ export default {
   li {
     padding: 1.5rem;
     max-width: 250px;
-
-    img {
-    }
   }
 }
 </style>

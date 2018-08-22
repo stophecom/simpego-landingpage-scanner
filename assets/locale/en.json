@@ -1,9 +1,8 @@
 {
   "button": {
-    "scan": "Scan now",
     "upload": "Upload photo",
     "learnMore": "Learn more",
-    "calculateNow": "Get a quote"
+    "calculateNow": "Get a quote now"
   },
   "menu": {
     "about": "About Simpego",

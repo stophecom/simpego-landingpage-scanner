@@ -5,9 +5,12 @@
    <a v-else-if="href" class="button" :class="buttonColor(color)" :href="href" rel="noopener" target="_blank">
     <slot></slot>
   </a>
-  <nuxt-link v-else class="button" :class="buttonColor(color)" :to="localePath(to)">
+  <nuxt-link v-else-if="to" class="button" :class="buttonColor(color)" :to="localePath(to)">
     <slot></slot>
   </nuxt-link>
+   <button v-else class="button" :class="buttonColor(color, disabled)" type="submit">
+    <slot></slot>
+  </button>
 </template>
 
 <script>
@@ -19,7 +22,7 @@ export default {
     },
     to: {
       type: String,
-      default: '/'
+      default: ''
     },
     href: {
       type: String,
@@ -28,14 +31,19 @@ export default {
     plain: {
       type: Boolean,
       default: false
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
 
   methods: {
-    buttonColor: (color) => ({
+    buttonColor: (color, disabled) => ({
       'button--primary': color === 'primary',
       'button--secondary': color === 'secondary',
-      'button--transparent': color === 'transparent'
+      'button--transparent': color === 'transparent',
+      'button--disabled': disabled
     })
   }
 }
@@ -56,7 +64,7 @@ export default {
   line-height: 1.5;
   font-size: 1rem;
   font-weight: 600;
-  margin: 0.2rem;
+  margin: 0 0.2rem;
   padding: calc(0.375em - 1px) 0.75em;
   position: relative;
   user-select: none;
@@ -75,18 +83,24 @@ export default {
     transform: translateY(-1px);
   }
 
-  &.button--primary {
+  &:disabled,
+  &--disabled {
+    filter: grayscale(1);
+    pointer-events: none;
+  }
+
+  &--primary {
     background-clip: padding-box;
     background-image: linear-gradient(90deg,#37f267,#0abb72);
     color: #fff;
   }
 
-  &.button--secondary {
+  &--secondary {
     background-color: $secondary;
     color: #fff;
   }
 
-  &.button--transparent {
+  &--transparent {
     background-color: transparent;
     color: $text;
     font-weight: normal;
