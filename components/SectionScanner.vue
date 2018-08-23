@@ -74,9 +74,9 @@ export default {
         manual2: 'Done. You take part in the lottery!',
         successMessage: 'Wow, what a nice car. Let\'s get that baby insured right away!',
         statusSuccess: 'Vehicle recognition successful:',
-        postEmail: 'Please leave your email and receive your quote in no time',
-        postEmailSuccess: 'Huge success. You are about to save a substantial amount of money. We\'ll get back at you with your personal offer shortly.',
-        postEmailFailure: 'An error occured. Bitte contact support via E-Mail: hallo@simpego.ch'
+        postEmail: 'Please leave your email to take part in the lottery',
+        postEmailSuccess: 'Huge success. You are about to win the first price. Maybe. We\'ll get back at you asap.',
+        postEmailFailure: 'An error occured. Please contact support via Email: hallo@simpego.ch'
       },
       de: {
         title: 'Mitmachen und Gewinnen',
@@ -85,8 +85,8 @@ export default {
         manual2: 'Du nimmst am Gewinnspiel teil!',
         successMessage: 'Wow, was für ein tolles Auto. Lass uns das gleich versichern!',
         statusSuccess: 'Fahrzeugerkennung erfolgreich:',
-        postEmail: 'Hinterlasse deine E-mail und wir melden uns umgehend mit dem besten Angebot.',
-        postEmailSuccess: 'Bravo - so einfach geht sparen. Wir melden uns in Kürze mit deinem persönlichen Angebot!',
+        postEmail: 'Hinterlasse deine E-mail und nimm am Gewinnspiel teil',
+        postEmailSuccess: 'Bravo - so einfach geht Simpego. Wir melden uns in Kürze bei dir!',
         postEmailFailure: 'Es ist ein Fehler aufgetreten. Bitte kontaktiere uns via E-Mail: hallo@simpego.ch'
       }
     }
