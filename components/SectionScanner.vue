@@ -28,7 +28,7 @@
         </li>
         <li>
           <img alt="Done" src="/images/done.svg" />
-          <div class="description"><strong><del>2.</del> Boom.</strong> {{ $t('manual2') }}</div>
+          <div class="description"><strong>2. Boom.</strong> {{ $t('manual2') }}</div>
         </li>
       </ul>
       <div class="section__cta">
@@ -68,10 +68,10 @@ export default {
   i18n: {
     messages: {
       en: {
-        title: 'Save CHF 500 a year with one photo.',
-        headline: 'Find the best car insurance in the entire Swiss market. A photo of your vehicle registration document is enough. Here\'s how it works:',
+        title: 'Be a winner',
+        headline: 'Test our scanner and win car insurance for the whole year. A photo of your vehicle registration document is enough. Here\'s how it works:',
         manual1: 'Take a picture of your vehicle registration document',
-        manual2: 'Simpego finds you the best deal.',
+        manual2: 'Done. You take part in the lottery!',
         successMessage: 'Wow, what a nice car. Let\'s get that baby insured right away!',
         statusSuccess: 'Vehicle recognition successful:',
         postEmail: 'Please leave your email and receive your quote in no time',
@@ -79,11 +79,11 @@ export default {
         postEmailFailure: 'An error occured. Bitte contact support via E-Mail: hallo@simpego.ch'
       },
       de: {
-        title: 'Spare CHF 500  pro Jahr mit einem Foto.',
-        headline: 'Finde die beste Autoversicherung auf dem gesamten Schweizer Markt. Ein Foto von deinem Fahrzeugausweis genügt. So funktionierts:',
+        title: 'Mitmachen und Gewinnen',
+        headline: 'Teste unseren Scanner und gewinne eine Jahresversicherung für dein Auto. Ein Foto von deinem Fahrzeugausweis genügt. So funktionierts:',
         manual1: 'Fahrzeugausweis fotografieren',
-        manual2: 'Simpege liefert dir das beste Angebot.',
-        successMessage: 'Wow, was für ein toller Wagen. Lass uns den gleich versichern!',
+        manual2: 'Du nimmst am Gewinnspiel teil!',
+        successMessage: 'Wow, was für ein tolles Auto. Lass uns das gleich versichern!',
         statusSuccess: 'Fahrzeugerkennung erfolgreich:',
         postEmail: 'Hinterlasse deine E-mail und wir melden uns umgehend mit dem besten Angebot.',
         postEmailSuccess: 'Bravo - so einfach geht sparen. Wir melden uns in Kürze mit deinem persönlichen Angebot!',
