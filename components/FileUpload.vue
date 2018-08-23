@@ -59,10 +59,10 @@ export default {
   i18n: {
     messages: {
       en: {
-        scanError: 'Vehicle recognition failed. You posted some random picture, did you? :) Try with a real vehicle registration and save money.'
+        scanError: 'Vehicle recognition failed. You posted some random picture, did you? :) Try with a real vehicle registration (Inside).'
       },
       en: {
-        scanError: 'Fahrzeugerkennung fehlgeschlagen. Das Bild war kein Ausweis, stimmts? :) Versuche es mit einem richtigen Ausweis uns spare viel Geld.'
+        scanError: 'Fahrzeugerkennung fehlgeschlagen. Das Bild war kein Ausweis, stimmts? :) Versuche es mit einem richtigen Ausweis (Innenseite).'
       }
     }
   }
