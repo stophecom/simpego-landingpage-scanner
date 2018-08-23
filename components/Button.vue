@@ -74,6 +74,10 @@ export default {
   white-space: nowrap;
   -webkit-appearance: none;
 
+  > span {
+    margin-right: 0.3rem;
+  }
+
   &:hover {
     box-shadow: 0 2px 8px rgba(0,0,0,.3);
     transform: translateY(-1px);

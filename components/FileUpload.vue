@@ -5,6 +5,7 @@
     </div>
     <form v-else class="form" v-on:submit.prevent @change="handleFilesUpload()" enctype="multipart/form-data" id="take-picture-form">
       <Button plain>
+        <span class="fa fa-camera"></span>
         {{ $t('button.upload') }}
         <input accept="image/*" type="file" id="files" name="file" ref="file"/>
       </Button>
