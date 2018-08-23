@@ -59,7 +59,7 @@ export default {
     onSubmit: function () {
       var self = this
       window.$.ajax({
-        url: 'https://jumprock.co/mail/santihans',
+        url: 'https://jumprock.co/mail/simpego',
         method: 'POST',
         data: {
           subject: 'New car insurance lead',
