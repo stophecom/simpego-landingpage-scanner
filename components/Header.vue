@@ -82,7 +82,7 @@
       font-size: 0.8rem;
       margin-left: 1rem;
 
-      @media screen and (min-width: $breakpointMini) {
+      @media screen and (min-width: $breakpointSmall) {
         display: inline;
       }
     }
